@@ -1,0 +1,6 @@
+PASS: 243 article title/body lines matched against supplied manuscript.
+PASS: six articles; interview questions 21 + 6 + 6.
+PASS: no MP3 bundled for public distribution.
+PASS: JavaScript syntax check.
+Browser QA: article navigation, five joint-interview chapter controls, audio metadata (7:41), user initiated playback and persistent audio element verified.
+PASS: 390 x 844 mobile browser inspection; no horizontal overflow; player fits viewport.
