@@ -41,3 +41,43 @@ body{padding-bottom:0}#contents{bottom:0}@media(max-width:760px){body{padding-bo
 /* Joint interview chapter hierarchy */
 #article-2 .reading h2{font-size:26px;font-weight:700;line-height:1.5;color:var(--ink);border-top:2px solid var(--sage);margin-bottom:18px;padding-top:22px}#article-2 .reading h2+h3{margin-top:18px}@media(max-width:760px){#article-2 .reading h2{font-size:23px;margin-bottom:14px;padding-top:20px}#article-2 .reading h2+h3{margin-top:14px}}
 #article-5 .programme-work .work-credit{margin:12px 0 0;font-size:14px;line-height:1.6;color:var(--sage);font-family:Georgia,"Malgun Gothic",serif}
+
+
+/* Mobile cover: crop upper background */
+@media (max-width: 760px) {
+  .cover-art.photo-cover {
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .photo-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 58% 85%;
+  }
+
+  .photo-editorial {
+    top: auto;
+    bottom: 24px;
+    left: 6%;
+  }
+}
+
+/* Subtle blur on the upper edge of mobile cover */
+@media (max-width: 760px) {
+  .cover-art.photo-cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 16%;
+    z-index: 1;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  }
+}
